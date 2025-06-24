@@ -56,5 +56,6 @@ define drush::install (
     command     => "su - -c '${drush_exe} status'",
     require     => File[$drush_exe],
     refreshonly => true,
+    path        => '/usr/bin:/usr/sbin:/bin:/sbin',
   }
 }
